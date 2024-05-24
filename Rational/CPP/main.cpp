@@ -12,8 +12,19 @@ int main()
 
     Rational r(2, 5);
     Rational R(5, 15);
-    // R+=r;
-    cout << R;
+    cout << R << endl;
     R.simplify();
-    cout << R;
+    
+    
+
+
+
+    cout << "upr" <<  R <<  endl; 
+    cout << r << " + " << R << " = " << r+R << endl;
+    cout << r << " - " << R << " = " << r+(-R) << endl;
+    
+    cout <<  reducation(r, R)[0];
+    cout << r <<endl;
+    cout << r << " > " << R << " = " << (r>R) << endl;
+    cout << r << " < " << R << " = " << (r<R) << endl;
 }

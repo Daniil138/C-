@@ -77,6 +77,21 @@ Rational Rational::operator ++(int)
     return r;
 }
 
+Rational* reducation(Rational a, Rational b){
+    int zn = Nok(a.denom, b.denom);
+    Rational n[2];
+
+    a.numer = a.numer * zn/a.denom;
+    b.numer = b.numer * zn/b.denom;
+    a.denom = zn;
+    b.denom =zn;
+    n[0]=a;
+    n[1]=b;
+    cout <<  n[0];
+    return n;
+
+}
+
 void  Rational::simplify()
 {
     int NOD = Nod(numer, denom);
@@ -118,6 +133,7 @@ bool Rational::operator <= (const Rational& r) const
 
 
 
+
 istream& operator >>(istream& in, Rational& r)
 {
     in>>r.numer>>r.denom;
@@ -129,3 +145,4 @@ ostream& operator <<(ostream& out, const Rational& r)
     out<<r.numer<<"/"<<r.denom;
     return out;
 }
+

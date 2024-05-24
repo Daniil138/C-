@@ -27,6 +27,8 @@ class Rational
         Rational& operator ++(); // префикс
         Rational operator ++(int); // постфикс
 
+        
+
         bool operator ==(const Rational& r) const;
         bool operator !=(const Rational& r) const;
         bool operator >=(const Rational& r) const;
@@ -35,6 +37,7 @@ class Rational
         bool operator <(const Rational& r) const;
 
         void simplify();
+
 
         friend istream& operator >>(istream& in, Rational& r);
         friend ostream& operator <<(ostream& out, const Rational& r);
@@ -48,3 +51,6 @@ int Nod(int a, int b);
 
 // Наименьшее общее кратное 
 int Nok(int a, int b);
+
+// Приведение к общему знаменателю
+Rational* reducation(Rational a, Rational b);
